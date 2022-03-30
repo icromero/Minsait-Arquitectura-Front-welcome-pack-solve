@@ -1,0 +1,68 @@
+/*
+ * Portfolio_0.1
+ * Web Developments 
+ * Author: Ivan C Romero
+ * Since: 30/03/2022
+ */
+
+
+/*Defines global variables 
+ *to main colors we'll use on the project*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root {
+    --theme-color: white;
+    --main-color: #2149EC;
+    --secondary-color: #12052b;
+    --navbar-shadow-color: #EFEFEF;
+    --text-color: #12121A;
+    --text-color-inverse: #F5F6FF;
+    --menu-mobile-background-color: #040b66;
+}
+
+.container-main {
+    display: flexbox;
+    width: 100%;
+}
+
+@font-face {
+    font-family: "Roboto Regular";
+    src: url(../fonts/Roboto-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--theme-color);
+    color: var(--text-color);
+    padding-top: 80px;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (min-width: 576px) {
+    p {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) {
+    p {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 992px) {
+    p {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    p {
+        font-size: 24px;
+    }
+}
