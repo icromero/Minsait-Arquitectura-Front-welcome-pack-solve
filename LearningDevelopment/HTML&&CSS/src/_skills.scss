@@ -1,0 +1,50 @@
+        .section-skills {
+            @include flex-Box(space-between, center, wrap);
+            flex-direction: column;
+            .section-skills-container {
+                margin: -10rem 2rem 0;
+                .section-skills-container__columns {
+                    border: $border;
+                    border-radius: 20px;
+                    background-color: white;
+                }
+            }
+        }
+        
+        .section-skills-container__columns__column {
+            border-bottom: $border;
+            padding: 50px 30px;
+            text-align: center;
+            svg {
+                font-size: 48px;
+                color: $primary-color;
+                margin: 0 auto .5em;
+            }
+            p.main {
+                font-size: size(2.5);
+                color: $primary-color;
+                font-weight: 400;
+            }
+            ul {
+                margin: 0.25em auto;
+                padding: 0;
+                li {
+                    font-size: size(2);
+                    padding: 0.5em;
+                    font-weight: 300;
+                }
+            }
+        }
+        /*Display*/
+        
+        @media only screen and (min-width: 800px) {
+            .section-skills-container__columns {
+                @include flex-Box(space-between, flex-start, nowrap);
+                flex-direction: row;
+                .section-skills-container__columns__column {
+                    width: 33%;
+                    margin-top: 0;
+                    border: none;
+                }
+            }
+        }

@@ -1,0 +1,126 @@
+.container__header {
+    background-image: url(../img/background-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    background-position: center;
+    border-bottom: 2px solid $secondary-color;
+}
+
+.navbar {
+    @include flex-Box(space-between, center, nowrap);
+    padding: 1rem 0;
+    margin: 0 1rem;
+    a.logo {
+        font-size: size(2.5);
+        font-weight: 600;
+        color: $text-color-inverse;
+        cursor: pointer;
+    }
+    svg {
+        font-size: size(4);
+        background-color: $text-color;
+        color: $text-color-inverse;
+        border-radius: 5px;
+        padding: 2px;
+        cursor: pointer;
+        &:hover {
+            color: $text-color;
+            background-color: $text-color-inverse;
+            transform: scale(1.2);
+            transition: .5s;
+        }
+    }
+}
+
+.container-menu {
+    position: fixed;
+    height: 100%;
+    width: 250px;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+    z-index: 1;
+    .container-menu__content {
+        margin-left: auto;
+        width: 100%;
+        height: 100%;
+        max-width: 250px;
+        background: #1c1c1c;
+        svg {
+            margin: 1rem 80%;
+            background-color: #1c1c1c;
+            &:hover {
+                color: #1c1c1c;
+                background-color: $text-color-inverse;
+            }
+        }
+        nav {
+            @include flex-Box(space-evenly, center, nowrap);
+            flex-direction: column;
+            text-align: right;
+            a {
+                width: 100%;
+                padding: 2rem;
+                color: $text-color-inverse;
+                border-right: 5px solid transparent;
+                font-size: size(3);
+                &:hover {
+                    border-right: 5px solid $text-color-inverse;
+                    background: #2e2e30;
+                }
+            }
+        }
+    }
+}
+
+.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.container__header-content {
+    @include flex-Box(center, center, wrap);
+    flex-direction: column;
+    margin-top: 3rem;
+    .searchbar {
+        @include flex-Box(flex-start, center, nowrap);
+        width: 70%;
+        border-radius: 4px;
+        background-color: $text-color-inverse;
+        overflow: hidden;
+        box-shadow: $box-shadow;
+        svg {
+            font-size: size(7);
+        }
+        .search-input {
+            font-size: size(3);
+            width: auto;
+            border: none;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            color: $text-color;
+            outline: 0px;
+        }
+    }
+}
+
+.search-location {
+    width: 70%;
+    overflow: hidden;
+}
+
+.search-location__info {
+    @include flex-Box(space-between, center, nowrap);
+    background-color: $text-color;
+    opacity: 0.8;
+    border-radius: 4px;
+    padding: 0 1rem;
+    margin: 2rem 0;
+    p {
+        color: $text-color-inverse;
+        font-size: size(2);
+        max-width: 150px;
+    }
+}
