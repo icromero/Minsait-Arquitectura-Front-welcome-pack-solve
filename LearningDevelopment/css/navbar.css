@@ -1,0 +1,113 @@
+.header-container {
+    box-shadow: 0 2px 5px var(--navbar-shadow-color);
+    position: fixed;
+    background-color: var(--theme-color);
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    color: var(--main-color);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    padding: 0 15px;
+}
+
+.nav-menu a {
+    color: var(--main-color);
+    font-size: 18px;
+    line-height: 50px;
+    text-transform: uppercase;
+}
+
+a.button-contact {
+    display: inline-block;
+    border-radius: 2em;
+    color: var(--text-color-inverse);
+    background-color: var(--main-color);
+    text-align: center;
+    padding: 0 .8rem;
+    cursor: pointer;
+}
+
+.mobile-open-menu,
+.mobile-close-menu {
+    display: none;
+}
+
+.mobile-open-menu {
+    color: var(--main-color);
+    font-size: 30px;
+}
+
+.mobile-close-menu {
+    color: var(--text-color-inverse);
+    font-size: 30px;
+}
+
+
+/*Display */
+
+@media only screen and (max-width: 600px) {
+    .nav-menu {
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        align-items: center;
+        background-color: var( --menu-mobile-background-color);
+        opacity: 0;
+    }
+    .nav-menu li {
+        padding: 0;
+    }
+    .nav-menu a {
+        color: var(--text-color-inverse);
+        line-height: 60px;
+        text-transform: uppercase;
+    }
+    a.button-contact {
+        display: block;
+        border-radius: 0;
+        color: var(--text-color-inverse);
+        background-color: var(--menu-mobile-background-color);
+    }
+    .mobile-open-menu,
+    .mobile-close-menu {
+        display: block;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+    .mobile-close-menu {
+        margin: 12px 10px;
+        align-self: flex-end;
+    }
+    .open-menu {
+        opacity: 1;
+        pointer-events: all;
+    }
+}
