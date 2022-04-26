@@ -8,6 +8,7 @@
 import { APP } from "../../business/app.js";
 
 APP.exec();
+modalTrigger('welcome-modal', 'close-modal', 2);
 
 /*Variables */
 let home = document.getElementById('home');
@@ -25,7 +26,7 @@ let searchInput = document.getElementById('search');
 
 openBtn.addEventListener('click', toggleMenu); //Open button SideMenu
 closeBtn.addEventListener('click', toggleMenu); //Close button SideMenu
-logo.addEventListener('click', () => window.location.href = "index.html");
+logo.addEventListener('click', () => { window.location.href = "index.html" });
 facebookBtn.addEventListener('click', () => window.location.href = "https://es-es.facebook.com/");
 instagramBtn.addEventListener('click', () => window.location.href = "https://www.instagram.com/?hl=es");
 whatsAppBtn.addEventListener('click', () => window.location.href = "https://web.whatsapp.com/");

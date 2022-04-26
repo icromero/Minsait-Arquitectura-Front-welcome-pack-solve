@@ -1,4 +1,4 @@
-import { loadLocalSpecificData, applyDataCollapse, loadHistorySpecificData } from '../interface/js/detail.js';
+import { loadLocalSpecificData, applyDataCollapse, loadHistorySpecificData, toggleSpecificInfo } from '../interface/js/detail.js';
 import { loadLocalBasicData, applyDataHover } from '../interface/js/list.js';
 /**
  * 
@@ -28,6 +28,7 @@ function localCurrentWeather(lat, lon, apiKey) {
             loadHistorySpecificData(FILTER_OBJECT);
             applyDataHover();
             applyDataCollapse();
+            toggleSpecificInfo();
 
         })
 

@@ -29,16 +29,14 @@ function loadLocalBasicData(weatherApiResponse) {
 function applyDataHover() {
     let locInfo = document.getElementsByClassName('location-info__data');
     for (let index = 0; index < locInfo.length; index++) {
-        locInfo[index].addEventListener('mouseover', (event) => {
+        locInfo[index].addEventListener('mouseover', () => {
             // highlight the mouseenter target
-            event.target.style.background = '#F68B0C';
+            locInfo[index].style.background = '#F68B0C';
 
         }, true);
-        locInfo[index].addEventListener('mouseleave', (eve) => {
+        locInfo[index].addEventListener('mouseleave', () => {
             // reset the color after a short delay
-            setTimeout(function() {
-                eve.target.style.background = 'black';
-            });
+            locInfo[index].style.background = 'black';
         }, true)
 
     }

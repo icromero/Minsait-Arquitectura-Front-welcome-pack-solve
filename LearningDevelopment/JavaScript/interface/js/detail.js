@@ -89,4 +89,23 @@ function loadHistorySpecificData(weatherApiResponse) {
 }
 
 
-export { applyDataCollapse, loadLocalSpecificData, loadHistorySpecificData };
+
+function toggleSpecificInfo() {
+    let specificInfo = document.getElementById('specificInfo');
+    specificInfo.style.display = 'none';
+    let location = document.getElementsByClassName('search-location__info')[0];
+    location.setAttribute('style', 'cursor:pointer');
+    location.addEventListener('mouseover', () => {
+        location.style.background = '#F68B0C';
+    });
+    location.addEventListener('mouseleave', (ev) => {
+        location.style.background = '#12121A';
+    });
+    location.addEventListener('click', () => {
+        if (specificInfo.style.display == 'none') { specificInfo.style.display = 'flex'; } else {
+            specificInfo.style.display = 'none';
+        }
+    });
+}
+
+export { applyDataCollapse, loadLocalSpecificData, loadHistorySpecificData, toggleSpecificInfo };
